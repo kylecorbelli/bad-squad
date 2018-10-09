@@ -16,6 +16,7 @@ var verbs = [
 
 var arjanQuoteIndex = 0;
 var arjanQuotes = [
+  "¯\_(ツ)_/¯",
   "80/20.",
   "This is why we can’t have nice things.",
   "Waka waka!",
