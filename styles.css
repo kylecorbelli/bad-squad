@@ -1,0 +1,195 @@
+html,
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.img-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.bad-logo {
+  animation-duration: 3000ms;
+  animation-fill-mode: both;
+  animation-name: fade-in-from-larger;
+  animation-timing-function: ease-out;
+  width: 100%;
+}
+
+p {
+  color: white;
+}
+
+.arjan {
+  align-content: center;
+  bottom: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  right: 35px;
+}
+
+.arjan-img-container {
+  align-items: center;
+  animation-delay: 9s;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  animation-name: fade-in-from-right;
+  animation-timing-function: ease-out;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  overflow: hidden;
+  width: 50px;
+}
+
+.arjan-img {
+  height: 100%;
+  width: 100%;
+}
+
+.arjan-wisdom {
+  background-color: #fffef2;
+  border-radius: 5px;
+  font-size: 12px;
+  font-style: italic;
+  margin-right: 20px;
+  opacity: 0;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  transition: opacity 300ms ease-in, transform 400ms ease-in;
+  transform: translateX(5%);
+}
+
+.arjan-wisdom::after {
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border-left: 10px solid #fffef2;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  bottom: 0;
+  right: -10px;
+  margin-bottom: auto;
+  margin-top: auto;
+  top: 0;
+}
+
+.arjan-wisdom--shown {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-up-and-in {
+  animation-delay: 2750ms;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-name: fade-up-and-in;
+  animation-timing-function: ease-out;
+}
+
+.slot-machine {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: slot-machine__fade-up-and-in;
+  animation-timing-function: ease-out;
+  color: #c6ffa3;
+  display: inline-block;
+}
+
+.slot-machine--fading-out {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: slot-machine__fade-up-and-out;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up-and-in {
+  from {
+    opacity: 0;
+    transform: translateY(105%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(105%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slot-machine__fade-up-and-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-75%);
+  }
+}
+
+@keyframes slot-machine__fade-up-and-in {
+  0% {
+    opacity: 0;
+    transform: translateY(75%);
+  }
+
+  75% {
+    opacity: 5%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-from-larger {
+  from {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
