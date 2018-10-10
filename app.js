@@ -16,12 +16,12 @@ var verbs = [
 
 var arjanQuoteIndex = 0;
 var arjanQuotes = [
-  "¯\_(ツ)_/¯",
   "80/20.",
   "This is why we can’t have nice things.",
   "Waka waka!",
   "Can we get some test coverage on that?",
-  "Our job ends at the \"add\" button."
+  "Our job ends at the \"add\" button.",
+  "¯\\_(ツ)_/¯"
 ];
 
 function getNextArjanQuote () {
