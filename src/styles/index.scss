@@ -67,6 +67,7 @@ p {
   border-radius: 5px;
   font-size: 12px;
   font-style: italic;
+  line-height: 12px;
   margin-right: 20px;
   opacity: 0;
   padding: 20px;
@@ -74,26 +75,26 @@ p {
   text-align: center;
   transition: opacity 300ms ease-in, transform 400ms ease-in;
   transform: translateX(5%);
-}
 
-.arjan-wisdom::after {
-  content: '';
-  height: 0;
-  position: absolute;
-  width: 0;
-  border-left: 10px solid #fffef2;
-  border-bottom: 10px solid transparent;
-  border-top: 10px solid transparent;
-  bottom: 0;
-  right: -10px;
-  margin-bottom: auto;
-  margin-top: auto;
-  top: 0;
-}
+  &--shown {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-.arjan-wisdom--shown {
-  opacity: 1;
-  transform: translateX(0);
+  &::after {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border-left: 10px solid #fffef2;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    bottom: 0;
+    right: -10px;
+    margin-bottom: auto;
+    margin-top: auto;
+    top: 0;
+  }
 }
 
 .fade-up-and-in {
