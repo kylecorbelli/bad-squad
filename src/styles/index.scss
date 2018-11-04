@@ -1,8 +1,11 @@
+$bad-green: #c6ffa3;
+
 html,
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;  margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 body {
@@ -54,7 +57,16 @@ p {
   height: 50px;
   justify-content: center;
   overflow: hidden;
+  transition: 0.2s box-shadow ease-out;
   width: 50px;
+
+  &:hover {
+    box-shadow: 0 0 30px -1px $bad-green;
+  }
+
+  &:active {
+    box-shadow: 0 0 20px -2px $bad-green;
+  }
 }
 
 .arjan-img {
@@ -110,7 +122,7 @@ p {
   animation-fill-mode: both;
   animation-name: slot-machine__fade-up-and-in;
   animation-timing-function: ease-out;
-  color: #c6ffa3;
+  color: $bad-green;
   display: inline-block;
 }
 
